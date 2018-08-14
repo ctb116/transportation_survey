@@ -8,16 +8,16 @@ $(document).ready(function(){
       userResponses.push(workTransportationMode);
       // $('#work-responses').append(workTransportationMode + "<br>");
     });
-    for (var index = 0; index < userResponses.length; index+=1)
+      for (var index = 0; index < userResponses.length; index+=1) {
 
       if (userResponses[index] === "bike" || userResponses[index] === "walk") {
         $("#work-responses").show();
       } else if (userResponses[index] === "skateboard" || userResponses[index] === "scooter" || userResponses[index] === "rollerblade") {
       $("#dream-responses").show();
-    } else {
+      } else {
         $("#fun-responses").show();
+      }
     }
-
 
     // if (userResponses === "bike") {
     //   alert("You're good. You love to use muscle power");
