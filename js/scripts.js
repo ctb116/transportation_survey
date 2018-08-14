@@ -8,16 +8,23 @@ $(document).ready(function(){
       userResponses.push(workTransportationMode);
       // $('#work-responses').append(workTransportationMode + "<br>");
     });
-      for (var index = 0; index < userResponses.length; index+=1) {
+    $("input:checkbox[name=dream-transportation]:checked").each(function(){
+      var dreamTransportationMode = $(this).val();
+      userResponses.push(dreamTransportationMode);
+    });
 
-      if (userResponses[index] === "bike" || userResponses[index] === "walk") {
+
+
+      // for (var index = 0; index < userResponses.length; index+=1) {
+
+      if (userResponses[0] === "bike" || userResponses[0] === "walk" || userResponses[0] === "unicorn") {
         $("#work-responses").show();
-      } else if (userResponses[index] === "skateboard" || userResponses[index] === "scooter" || userResponses[index] === "rollerblade") {
+      } else if (userResponses[0] === "skateboard" || userResponses[0] === "scooter" || userResponses[0] === "rollerblade") {
       $("#dream-responses").show();
       } else {
         $("#fun-responses").show();
       }
-    }
+    // }
 
     // if (userResponses === "bike") {
     //   alert("You're good. You love to use muscle power");
@@ -38,3 +45,4 @@ $(document).ready(function(){
     $('#transportation_survey').hide();
   });
 });
+||
